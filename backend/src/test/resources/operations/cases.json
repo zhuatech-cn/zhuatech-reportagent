@@ -1,0 +1,66 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "weightedPct": "#73.6364",
+      "unweightedPct": "#45"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "minimumPct": "74"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "aDenominator": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "bNumerator": "11"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "bNumerator": "8"
+    },
+    "expected": {
+      "weightedPct": "#80",
+      "biasPercentagePoints": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "aNumerator": "0",
+      "bNumerator": "0"
+    },
+    "expected": {
+      "weightedPct": "#0",
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "aNumerator": "100",
+      "bNumerator": "10",
+      "minimumPct": "100"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false
+  }
+]

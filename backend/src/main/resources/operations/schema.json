@@ -1,0 +1,84 @@
+{
+  "slug": "reportagent",
+  "title": "经营比率的加权汇总与口径核对",
+  "fields": [
+    {
+      "key": "id",
+      "label": "记录编号",
+      "type": "ID"
+    },
+    {
+      "key": "aNumerator",
+      "label": "A组达成量",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "aDenominator",
+      "label": "A组总量",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0.000001",
+      "max": "1000000000000"
+    },
+    {
+      "key": "bNumerator",
+      "label": "B组达成量",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0",
+      "max": "1000000000000"
+    },
+    {
+      "key": "bDenominator",
+      "label": "B组总量",
+      "type": "NUMBER",
+      "scale": 6,
+      "min": "0.000001",
+      "max": "1000000000000"
+    },
+    {
+      "key": "minimumPct",
+      "label": "合并最低达成率%",
+      "type": "NUMBER",
+      "scale": 4,
+      "min": "0",
+      "max": "100"
+    }
+  ],
+  "columns": [
+    {
+      "key": "weightedPct",
+      "label": "正确加权比率%"
+    },
+    {
+      "key": "unweightedPct",
+      "label": "简单平均对照%"
+    },
+    {
+      "key": "biasPercentagePoints",
+      "label": "简单平均偏差百分点"
+    }
+  ],
+  "description": "将两分组分子分母汇总后计算比率，并展示简单平均与正确加权比率差异；不直接相加平均率，零分母明确拒绝。",
+  "owner": "上海如静知华信息科技有限公司",
+  "website": "https://www.zhuatech.cn/",
+  "authorization": "商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。",
+  "version": 1,
+  "notes": "输入均须为已获授权的同口径数据。金额固定人民币元；比例为百分数。核算结果只用于复核，未审批、未写库、未发起外部调用，也未触发付款、签名、资料销毁或设备控制。建议不构成法律、安全、会计或碳核证结论。",
+  "sample": {
+    "asOf": "2026-10-23",
+    "records": [
+      {
+        "id": "ITEM-001",
+        "aNumerator": "80",
+        "aDenominator": "100",
+        "bNumerator": "1",
+        "bDenominator": "10",
+        "minimumPct": "70"
+      }
+    ]
+  }
+}
