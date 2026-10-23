@@ -1,0 +1,77 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "weightedPct": "#73.6364",
+      "unweightedPct": "#45"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "weightedPct": "#73.6364",
+      "unweightedPct": "#45"
+    }
+  },
+  {
+    "patch": {
+      "minimumPct": "74"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "weightedPct": "#73.6364",
+      "unweightedPct": "#45"
+    }
+  },
+  {
+    "patch": {
+      "bNumerator": "8"
+    },
+    "expected": {
+      "weightedPct": "#80",
+      "biasPercentagePoints": "#0"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "weightedPct": "#73.6364",
+      "unweightedPct": "#45"
+    }
+  },
+  {
+    "patch": {
+      "aNumerator": "0",
+      "bNumerator": "0"
+    },
+    "expected": {
+      "weightedPct": "#0",
+      "decision": "HOLD"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "weightedPct": "#73.6364",
+      "unweightedPct": "#45"
+    }
+  },
+  {
+    "patch": {
+      "aNumerator": "100",
+      "bNumerator": "10",
+      "minimumPct": "100"
+    },
+    "expected": {
+      "decision": "PASS"
+    },
+    "error": false,
+    "baseline": {
+      "decision": "PASS",
+      "weightedPct": "#73.6364",
+      "unweightedPct": "#45"
+    }
+  }
+]
